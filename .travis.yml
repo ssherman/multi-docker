@@ -11,16 +11,16 @@ script:
 
 
 after_success:
-  - docker build -t ssherman/multi-client ./client
-  - docker build -t ssherman/multi-nginx ./nginx
-  - docker build -t ssherman/multi-server ./server
-  - docker build -t ssherman/multi-worker ./worker
+  - docker build -t wtf242/multi-client ./client
+  - docker build -t wtf242/multi-nginx ./nginx
+  - docker build -t wtf242/multi-server ./server
+  - docker build -t wtf242/multi-worker ./worker
   # login to docker cli
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push ssherman/multi-client
-  - docker push ssherman/multi-nginx
-  - docker push ssherman/multi-server
-  - docker push ssherman/multi-worker
+  - docker push wtf242/multi-client
+  - docker push wtf242/multi-nginx
+  - docker push wtf242/multi-server
+  - docker push wtf242/multi-worker
 # deploy:
 #   provider: elasticbeanstalk
 #   region: "us-east-1"
