@@ -4,10 +4,10 @@ services:
   - docker
 
 before_install:
-  - docker build -t ssherman/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t wtf242/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true ssherman/react-test npm run test
+  - docker run -e CI=true wtf242/react-test npm run test
 
 
 after_success:
